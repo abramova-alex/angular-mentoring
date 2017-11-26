@@ -1,0 +1,16 @@
+<div class="course-details">
+  <div class="course-details__main">
+    <div class="course-details__main-header">
+      <div class="course-details__main-header-info">{{course.name}}</div>
+      <div class="course-details__main-header-info">{{course.duration}} min</div>
+      <div class="course-details__main-header-info">{{course.date | date: 'dd MM yyyy'}}</div>
+    </div>
+    <div class="course-details__main-info">
+      {{course.info}}
+    </div>
+  </div>
+  <div class="course-details__actions">
+    <button class="course-details__action-button">Edit course</button>
+    <button class="course-details__action-button">delete</button>
+  </div>
+</div>

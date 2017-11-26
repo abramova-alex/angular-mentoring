@@ -1,0 +1,46 @@
+.course-details {
+  border: 2px solid #464547;
+  margin: 30px;
+  padding: 10px;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &__main {
+    width: 60%;
+    float: left;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    font-family: 'source-sans-pro-regular',sans-serif,helvetica,arial;
+    margin-top: 11px;
+    margin-bottom: 18px;
+  }
+
+  &__main-header-info {
+    width: 20%;
+    padding: 10px;
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin-top: 14px;
+  }
+
+  &__actions {
+    float: right;
+
+  }
+
+  &__action-button {
+    width: 100%;
+    border: none;
+    background: #a3c644;
+    height: 40px;
+    color: white;
+    text-transform: uppercase;
+    margin: 10px;
+    border-radius: 0;
+  }
+}

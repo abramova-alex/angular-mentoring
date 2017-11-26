@@ -1,0 +1,19 @@
+.login {
+  height: 50px;
+  float: right;
+
+  &__user {
+    text-transform: uppercase;
+    color: #464547;
+  }
+
+  &__button {
+    width: 100%;
+    border: none;
+    background: #a3c644;
+    height: 40px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 0;
+  }
+}
