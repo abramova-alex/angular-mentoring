@@ -1,0 +1,24 @@
+.course-list {
+  &__find {
+    margin: 30px;
+    display: inline-block;
+    width: 60%;
+  }
+
+  &__find-input {
+    width: 300px;
+    padding: 13px 20px;
+    border: 1px solid #98999b;
+  }
+
+  &__find-button {
+    display: inline-block;
+    width: 30%;
+    border: none;
+    background: #a3c644;
+    height: 40px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 0;
+  }
+}

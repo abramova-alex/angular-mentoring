@@ -1,0 +1,11 @@
+.courses-app-header {
+  padding: 30px;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.15);
+  font-family: 'oswald-regular',helvetica,sans-serif,arial;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
