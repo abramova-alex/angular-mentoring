@@ -10,8 +10,8 @@ export class LogoComponent implements OnInit {
   logoText: string;
 
   constructor() {
-    this.logoText = 'Logo';
-    this.logoUrl = 'testUrl';
+    this.logoText = 'Courses';
+    this.logoUrl = 'assets/images/logo.jpg';
   }
 
   ngOnInit() {
