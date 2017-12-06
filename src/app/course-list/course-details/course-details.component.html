@@ -10,7 +10,9 @@
     </div>
   </div>
   <div class="course-details__actions">
-    <button class="course-details__action-button">Edit course</button>
-    <button class="course-details__action-button">delete</button>
+    <button class="course-details__action-button"
+            (click)="editCourse(course)">Edit course</button>
+    <button class="course-details__action-button test"
+            (click)="removeCourse(course)">delete</button>
   </div>
 </div>

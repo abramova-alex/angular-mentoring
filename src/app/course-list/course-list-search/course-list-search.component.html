@@ -1,0 +1,9 @@
+<div class="course-list__find">
+  <input type="text"
+         placeholder="Type to search"
+         class="course-list__find-input"
+         [(ngModel)]="searchString"
+         (keyup.enter)="findCourse(searchString)">
+  <button class="course-list__find-button"
+          (click)="findCourse(searchString)">Find</button>
+</div>
