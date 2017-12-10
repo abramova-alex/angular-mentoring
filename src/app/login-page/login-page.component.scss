@@ -1,0 +1,21 @@
+.login-page {
+  &__input {
+    display: block;
+    padding: 13px 20px;
+    border: 1px solid #98999b;
+    margin: 20px;
+  }
+
+  &__button {
+    display: inline-block;
+    width: 30%;
+    border: none;
+    background: #a3c644;
+    height: 40px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 0;
+    margin: 20px;
+  }
+
+}

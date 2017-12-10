@@ -10,7 +10,7 @@ export class CourseListSearchComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('courseSearch onChange');
+    console.log('courseSearch onInit');
   }
 
   findCourse(searchString: string) {

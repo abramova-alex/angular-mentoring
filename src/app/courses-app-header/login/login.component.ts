@@ -1,21 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../user';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [AuthService]
 })
 export class LoginComponent implements OnInit {
-  currentUser: User;
+  currentUserName: string;
 
-  constructor() {
-    let testUser = new User(1, 'Oleksandra Abramova', 'qwerty');
-
-    this.currentUser = testUser;
+  constructor(private authService: AuthService) {
   }
 
   ngOnInit() {
+    this.authService.login();
+    this.currentUserName = this.authService.isAuthenticated() ? this.authService.getUserInfo() : '';
   }
 
+  logout() {
+    this.currentUserName = '';
+    this.authService.logout();
+  }
 }

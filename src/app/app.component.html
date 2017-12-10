@@ -1,4 +1,4 @@
 <app-courses-app-header></app-courses-app-header>
-<app-course-list>
-</app-course-list>
+<app-login-page *ngIf="!isLoginPage()"></app-login-page>
+<app-course-list *ngIf="isLoginPage()"></app-course-list>
 <app-courses-app-footer></app-courses-app-footer>

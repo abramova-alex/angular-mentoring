@@ -11,38 +11,36 @@ import { Course } from '../course';
 export class CourseListComponent implements OnInit {
   courses: Course[];
 
-  constructor() {
+  constructor(private courseDataService: CourseDataService) {
   }
 
   onRemove(course: Course) {
-    console.log('delete', course.id);
+    const result = confirm('Do you really want to delete this course? ');
+
+    if (result) {
+      this.courseDataService.deleteCourse(course.id);
+    }
   }
 
-  onEdit(course: Course) {
-    console.log('edit', course.id);
+  onEdit(course: Course, values: Object) {
+    this.courseDataService.editCourse(course.id, values);
+  }
+
+  addCourse() {
+    const id = this.courseDataService.getId();
+    const testCourse = new Course(id, `${id} Course` , 35, new Date(), `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Cras malesuada cursus faucibus. Morbi eget leo pharetra, aliquet velit in, laoreet velit.
+      Quisque venenatis dictum nisl id euismod. Donec bibendum volutpat ligula, ac volutpat quam egestas
+      non. Aliquam erat volutpat. Ut auctor lacus vitae laoreet faucibus. Suspendisse posuere
+      nec leo et vestibulum. Orci varius natoque penatibus et magnis dis parturient montes,
+      nascetur ridiculus mus. Praesent eu volutpat dolor. Praesent vitae vulputate lacus,
+      eu porta magna. Sed dignissim erat ut justo viverra efficitur. Sed dictum consectetur dignissim.`);
+
+    this.courseDataService.addCourse(testCourse);
   }
 
   ngOnInit() {
-    console.log('courseList onInit');
-
-    this.courses = [new Course(1,'First Course', 45, new Date(), `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Cras malesuada cursus faucibus. Morbi eget leo pharetra, aliquet velit in, laoreet velit.
-      Quisque venenatis dictum nisl id euismod. Donec bibendum volutpat ligula, ac volutpat quam egestas
-      non. Aliquam erat volutpat. Ut auctor lacus vitae laoreet faucibus. Suspendisse posuere
-      nec leo et vestibulum. Orci varius natoque penatibus et magnis dis parturient montes,
-      nascetur ridiculus mus. Praesent eu volutpat dolor. Praesent vitae vulputate lacus,
-      eu porta magna. Sed dignissim erat ut justo viverra efficitur. Sed dictum consectetur dignissim.`),
-      new Course(2,'Second Course', 35, new Date(), `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Cras malesuada cursus faucibus. Morbi eget leo pharetra, aliquet velit in, laoreet velit.
-      Quisque venenatis dictum nisl id euismod. Donec bibendum volutpat ligula, ac volutpat quam egestas
-      non. Aliquam erat volutpat. Ut auctor lacus vitae laoreet faucibus. Suspendisse posuere
-      nec leo et vestibulum. Orci varius natoque penatibus et magnis dis parturient montes,
-      nascetur ridiculus mus. Praesent eu volutpat dolor. Praesent vitae vulputate lacus,
-      eu porta magna. Sed dignissim erat ut justo viverra efficitur. Sed dictum consectetur dignissim.`)];
-  }
-
-  ngOnChanges() {
-    console.log('courseList onChange');
+    this.courses = this.courseDataService.getCourses();
   }
 
 }
