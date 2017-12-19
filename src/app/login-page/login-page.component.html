@@ -1,0 +1,14 @@
+<div class="login-page">
+  <input type="text"
+         [(ngModel)]="loginString"
+         class="login-page__input"
+         placeholder="Login">
+  <input type="password"
+         class="login-page__input"
+         [(ngModel)]="passwordString"
+         placeholder="Password">
+  <button (click)="login(loginString, passwordString)"
+          class="login-page__button">Enter</button>
+</div>
+
+

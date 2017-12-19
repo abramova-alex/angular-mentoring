@@ -1,6 +1,8 @@
 <div class="login">
   <div class="login__user">
-    {{currentUser.name}}
+    {{currentUserName}}
   </div>
-  <button class="login__button">logoff</button>
+
+  <button class="login__button"
+          (click)="logout()">logoff</button>
 </div>

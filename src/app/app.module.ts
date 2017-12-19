@@ -11,6 +11,7 @@ import { LoginComponent } from './courses-app-header/login/login.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailsComponent } from './course-list/course-details/course-details.component';
 import { CourseListSearchComponent } from './course-list/course-list-search/course-list-search.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CourseListSearchComponent } from './course-list/course-list-search/cour
     LoginComponent,
     CourseListComponent,
     CourseDetailsComponent,
-    CourseListSearchComponent
+    CourseListSearchComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
