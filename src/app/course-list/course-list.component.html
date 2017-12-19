@@ -1,13 +1,15 @@
 <div class="course-list">
   <div>
-    <app-course-list-search></app-course-list-search>
+    <app-course-list-search (onFind)="onFind($event)"></app-course-list-search>
 
     <button class="course-list__button"
             (click)="addCourse()">Add course</button>
   </div>
 
+  <div *ngIf="courses.length === 0"
+       class="course-list__no-course">{{noCourseText}}</div>
   <ul>
-    <li *ngFor="let course of courses">
+    <li *ngFor="let course of courses | orderBy">
       <app-course-details [course]="course"
                           (onRemove)="onRemove($event)"
                           (onEdit)="onEdit($event)"></app-course-details>

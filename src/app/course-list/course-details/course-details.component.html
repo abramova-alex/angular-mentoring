@@ -1,9 +1,12 @@
-<div class="course-details">
+<div class="course-details"
+     [ngClass]="{'course-details_top': course.topRated }"
+     [appNewCourse] = course>
   <div class="course-details__main">
     <div class="course-details__main-header">
-      <div class="course-details__main-header-info">{{course.name}}</div>
-      <div class="course-details__main-header-info">{{course.duration}} min</div>
-      <div class="course-details__main-header-info">{{course.date | date: 'dd MM yyyy'}}</div>
+      <div class="course-details__main-header-info">{{course.name | uppercase}}</div>
+      <div class="course-details__main-header-info">{{course.duration | formatDuration}}</div>
+      <div class="course-details__main-header-info course-details__main-header-info_star"
+           *ngIf="course.topRated">★</div>
     </div>
     <div class="course-details__main-info">
       {{course.info}}

@@ -15,4 +15,10 @@
     text-transform: uppercase;
     border-radius: 0;
   }
+
+  &__no-course {
+    border: 2px solid #464547;
+    margin: 30px;
+    padding: 10px;
+  }
 }

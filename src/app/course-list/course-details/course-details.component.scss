@@ -3,6 +3,10 @@
   margin: 30px;
   padding: 10px;
 
+  &_top {
+    background-color: #39c2d7;
+  }
+
   &::after {
     content: "";
     display: table;
@@ -26,6 +30,10 @@
     font-size: 1.5rem;
     line-height: 1.75rem;
     margin-top: 14px;
+
+    &_star {
+      color: #fffe4a;
+    }
   }
 
   &__actions {
