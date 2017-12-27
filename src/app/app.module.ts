@@ -12,6 +12,10 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailsComponent } from './course-list/course-details/course-details.component';
 import { CourseListSearchComponent } from './course-list/course-list-search/course-list-search.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { NewCourseDirective } from './new-course.directive';
+import { FormatDurationPipe } from './format-duration.pipe';
+import { OrderByPipe } from './order-by.pipe';
+import { FindByNamePipe } from './find-by-name.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { LoginPageComponent } from './login-page/login-page.component';
     CourseListComponent,
     CourseDetailsComponent,
     CourseListSearchComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    NewCourseDirective,
+    FormatDurationPipe,
+    OrderByPipe,
+    FindByNamePipe
   ],
   imports: [
     BrowserModule,
