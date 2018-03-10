@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
 
 @Component({
@@ -7,11 +7,19 @@ import { AuthService } from './auth.service';
   styleUrls: ['./app.component.scss'],
   providers: [AuthService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  isLogin = false;
+
   constructor(private authService: AuthService) {
   }
 
-  isLoginPage(): boolean {
-    return this.authService.isAuthenticated();
+  isAddPage(): boolean {
+    return false;
   }
-}
+
+  ngOnInit() {
+    this.authService.isAuthenticated().subscribe((res) => {
+      this.isLogin = res;
+    });
+  }
+ }

@@ -8,13 +8,14 @@ import { AuthService } from '../auth.service';
   providers: [AuthService]
 })
 export class CoursesAppHeaderComponent implements OnInit {
+  isLoginPage = false;
 
   constructor(private authService: AuthService ) { }
 
   ngOnInit() {
-  }
-
-  isLoginPage(): boolean {
-    return this.authService.isAuthenticated();
+    this.authService.isAuthenticated()
+      .subscribe((res) => {
+        this.isLoginPage = res;
+      });
   }
 }

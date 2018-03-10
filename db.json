@@ -1,0 +1,44 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "First Course",
+      "duration": 45,
+      "date": "Dec 31, 2016",
+      "info": "lorem",
+      "topRated": false
+    },
+    {
+      "id": 2,
+      "name": "Second Course",
+      "duration": 125,
+      "date": "Feb 10, 2018",
+      "info": "lorem ipsum",
+      "topRated": false
+    },
+    {
+      "id": 3,
+      "name": "Third Course",
+      "duration": 95,
+      "date": "2018-03-07T22:00:00.000Z",
+      "info": "lorem ipsum 3",
+      "topRated": true
+    },
+    {
+      "id": 1520717543666,
+      "name": "1520717543666 Course",
+      "duration": 90,
+      "date": "2018-03-10T21:32:23.666Z",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n      Cras malesuada cursus faucibus. Morbi eget leo pharetra, aliquet velit in, laoreet velit.\n      Quisque venenatis dictum nisl id euismod. Donec bibendum volutpat ligula, ac volutpat quam egestas\n      non. Aliquam erat volutpat. Ut auctor lacus vitae laoreet faucibus. Suspendisse posuere\n      nec leo et vestibulum. Orci varius natoque penatibus et magnis dis parturient montes,\n      nascetur ridiculus mus. Praesent eu volutpat dolor. Praesent vitae vulputate lacus,\n      eu porta magna. Sed dignissim erat ut justo viverra efficitur. Sed dictum consectetur dignissim.",
+      "topRated": true
+    },
+    {
+      "id": 1520717544461,
+      "name": "1520717544461 Course",
+      "duration": 90,
+      "date": "2018-03-10T21:32:24.461Z",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n      Cras malesuada cursus faucibus. Morbi eget leo pharetra, aliquet velit in, laoreet velit.\n      Quisque venenatis dictum nisl id euismod. Donec bibendum volutpat ligula, ac volutpat quam egestas\n      non. Aliquam erat volutpat. Ut auctor lacus vitae laoreet faucibus. Suspendisse posuere\n      nec leo et vestibulum. Orci varius natoque penatibus et magnis dis parturient montes,\n      nascetur ridiculus mus. Praesent eu volutpat dolor. Praesent vitae vulputate lacus,\n      eu porta magna. Sed dignissim erat ut justo viverra efficitur. Sed dictum consectetur dignissim.",
+      "topRated": true
+    }
+  ]
+}
