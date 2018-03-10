@@ -1,0 +1,18 @@
+<div class="add-page">
+  Title <input
+         [(ngModel)]="titleString"
+         class="add-page__input"
+         placeholder="input title">
+  Description <input
+        [(ngModel)]="descString"
+        class="add-page__input"
+        placeholder="input desc">
+  <app-add-page-date></app-add-page-date>
+
+  <app-add-page-duration></app-add-page-duration>
+
+  <button (click)="save()"
+          class="add-page__button">Save</button>
+  <button (click)="cancel()"
+          class="add-page__button">Cancel</button>
+</div>

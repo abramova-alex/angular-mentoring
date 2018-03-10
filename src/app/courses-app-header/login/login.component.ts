@@ -15,7 +15,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.authService.login();
-    this.currentUserName = this.authService.isAuthenticated() ? this.authService.getUserInfo() : '';
+    this.authService.getUserInfo().subscribe(res => {
+      this.currentUserName = res;
+    });
   }
 
   logout() {

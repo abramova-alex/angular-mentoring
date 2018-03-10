@@ -16,6 +16,10 @@ import { NewCourseDirective } from './new-course.directive';
 import { FormatDurationPipe } from './format-duration.pipe';
 import { OrderByPipe } from './order-by.pipe';
 import { FindByNamePipe } from './find-by-name.pipe';
+import { ApiService } from './api.service';
+import { AddPageComponent } from './add-page/add-page.component';
+import { AddPageDateComponent } from './add-page/add-page-date/add-page-date.component';
+import { AddPageDurationComponent } from './add-page/add-page-duration/add-page-duration.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +35,17 @@ import { FindByNamePipe } from './find-by-name.pipe';
     NewCourseDirective,
     FormatDurationPipe,
     OrderByPipe,
-    FindByNamePipe
+    FindByNamePipe,
+    AddPageComponent,
+    AddPageDateComponent,
+    AddPageDurationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
